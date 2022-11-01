@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route , Switch} from "react-router-dom"
+// components
+import Landing from './components/Landing';
+import Coindata from './components/Coindata';
+import Navbar from './components/Navbar';
+// context
+import UnitReduxProvider from './context/UnitReduxProvider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <UnitReduxProvider>
+                <Navbar />
+              <Switch>
+                  <Route path="/coin/:id" component={Coindata} />
+                  <Route path="/" component={Landing} />
+              </Switch>
+            </UnitReduxProvider>
+        </div>
+    );
+};
 
 export default App;
