@@ -1,5 +1,5 @@
 # Crypto-Master
-a  crypto currency site with Dynamic page and charts for each coin and also two currency units
+a  crypto currency site with Dynamic page and charts for each coin and also two currency units.
 
 
 # Screenshots
